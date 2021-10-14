@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 # Internal Modules
 from routes.currencies_routes import currencies_endpoint
+from routes.criptos_routes import criptos_endpoint
 
 
 # Init FastAPI
@@ -28,3 +29,4 @@ app = FastAPI(
 
 # Include Routes to FastAPI
 app.include_router(currencies_endpoint)
+app.include_router(criptos_endpoint)
