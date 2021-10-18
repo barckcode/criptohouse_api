@@ -3,6 +3,7 @@ from fastapi import FastAPI
 # Internal Modules
 from routes.currencies_routes import currencies_endpoint
 from routes.criptos_routes import criptos_endpoint
+from routes.users_routes import users_endpoint
 
 
 # Init FastAPI
@@ -23,6 +24,14 @@ app = FastAPI(
             "name": "Criptos",
             "description": "Enpoint de Criptos"
         },
+        {
+            "name": "Users",
+            "description": "Enpoint de Users"
+        },
+        {
+            "name": "Preferences",
+            "description": "Enpoint de Preferences"
+        },
     ]
 )
 
@@ -30,3 +39,4 @@ app = FastAPI(
 # Include Routes to FastAPI
 app.include_router(currencies_endpoint)
 app.include_router(criptos_endpoint)
+app.include_router(users_endpoint)
