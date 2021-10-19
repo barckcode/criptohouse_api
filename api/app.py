@@ -5,6 +5,7 @@ from routes.currencies_routes import currencies_endpoint
 from routes.criptos_routes import criptos_endpoint
 from routes.users_routes import users_endpoint
 from routes.users_preferences_criptos_routes import users_preferences_cripto_endpoint
+from routes.users_preferences_currencies_routes import users_preferences_currencies_endpoint
 
 
 # Init FastAPI
@@ -30,8 +31,12 @@ app = FastAPI(
             "description": "Enpoint de Users"
         },
         {
-            "name": "Preferences",
-            "description": "Enpoint de Preferences"
+            "name": "User Preferences: Criptos",
+            "description": "Enpoint de User Cripto Preferences"
+        },
+        {
+            "name": "User Preferences: Currencies",
+            "description": "Enpoint de User Currency Preferences"
         },
     ]
 )
@@ -42,3 +47,4 @@ app.include_router(currencies_endpoint)
 app.include_router(criptos_endpoint)
 app.include_router(users_endpoint)
 app.include_router(users_preferences_cripto_endpoint)
+app.include_router(users_preferences_currencies_endpoint)
