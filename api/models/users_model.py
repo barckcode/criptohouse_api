@@ -6,7 +6,7 @@ from config.db import meta, engine_postgres
 
 
 users_table = Table("users", meta,
-    Column("id", Integer, primary_key=True, unique=False, nullable=True),
+    Column("id", Integer, primary_key=True, unique=False, nullable=False),
     Column("first_name", String, unique=True, nullable=False),
     Column("last_name", String, unique=True, nullable=False),
     Column("nickname", String, unique=True)

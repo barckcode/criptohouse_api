@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from routes.currencies_routes import currencies_endpoint
 from routes.criptos_routes import criptos_endpoint
 from routes.users_routes import users_endpoint
+from routes.users_preferences_criptos_routes import users_preferences_cripto_endpoint
 
 
 # Init FastAPI
@@ -40,3 +41,4 @@ app = FastAPI(
 app.include_router(currencies_endpoint)
 app.include_router(criptos_endpoint)
 app.include_router(users_endpoint)
+app.include_router(users_preferences_cripto_endpoint)
